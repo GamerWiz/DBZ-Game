@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Game{
+    
   public static void main(String[] args){
     Scanner whatClass = new Scanner(System.in);
     System.out.println("What class would you like?");
@@ -26,5 +27,6 @@ public class Game{
       Namekian playerNamekian = new Namekian(playerNamekianSpecialName, playerNamekianName);
       System.out.println("You created " + playerNamekian.name + "!" + " His special move is " + playerNamekian.SP + "!");
     }
+
   }
 }
