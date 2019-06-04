@@ -1,5 +1,10 @@
+import java.util.Scanner;
+
 public class Game{
   public static void main(String[] args){
-    System.out.println("Goku's first move is " + Boxer.M1 + "!");
+    Scanner whatClass = new Scanner(System.in);
+    System.out.println("What class would you like?");
+    Scanner nameCharacter = new Scanner(System.in);
+
   }
 }
