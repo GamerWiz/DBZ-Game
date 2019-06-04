@@ -7,18 +7,19 @@ public class Character{
   int M1DMG;
 }
   class Saiyan extends Character{
-    public Saiyan(String x, String y){
+    //constructor(input from object made in game, input from object)
+    public Saiyan(String saiyanSpecialName, String saiyanName){
       ATK = 95;
       DEF = 90;
-      SP = x;
-      name = y;
+      SP = saiyanSpecialName;
+      name = saiyanName;
       }
     }
   class Namekian extends Character{
-    public Namekian(String a, String b){
+    public Namekian(String namekianSpecialName, String namekianName){
       ATK = 90;
       DEF = 97;
-      SP = a;
-      name = b;
+      SP = namekianSpecialName;
+      name = namekianName;
     }
   }
