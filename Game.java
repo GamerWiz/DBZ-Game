@@ -1,7 +1,23 @@
 import java.util.Scanner;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class Game{
-    
+
+  static void kamehameha(){
+    //TimeUnit must be put in a try/catch
+    try{
+      System.out.println("KAME");
+      TimeUnit.SECONDS.sleep(1); //makes it wait for 1 second
+      System.out.println("HAME");
+      TimeUnit.SECONDS.sleep(1);
+      System.out.println("HAAAA");
+      TimeUnit.SECONDS.sleep(3);
+    }
+    catch (InterruptedException e) {
+      System.err.format("Chill");
+    }
+  }
   public static void main(String[] args){
     Scanner whatClass = new Scanner(System.in);
     System.out.println("What class would you like?");
@@ -15,7 +31,7 @@ public class Game{
       Scanner saiyanSpecialNamer = new Scanner(System.in);
       String playerSaiyanSpecialName = saiyanSpecialNamer.nextLine();
       Saiyan playerSaiyan = new Saiyan(playerSaiyanSpecialName, playerSaiyanName);
-      System.out.println("You created " + playerSaiyan.name + "!" + " His special move is " + playerSaiyan.SP + "!");
+      System.out.println("You created " + playerSaiyan.name + "!" + "\nSpecial Move:" + playerSaiyan.SP + "!");
     }
     if(chosenClass.equals("Namekian")){
       System.out.println("What is the name of your Namekian?");
