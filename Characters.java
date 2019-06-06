@@ -3,8 +3,10 @@ public class Characters{
   String name;
   int ATK;
   int DEF;
+  int INTL;
   String SP;
   int M1DMG;
+  int HLTH;
 }
   class Saiyan extends Character{
     //variables are from Characters class
@@ -14,6 +16,8 @@ public class Characters{
       DEF = 90;
       SP = saiyanSpecialName;
       name = saiyanName;
+      INTL = 50;
+      HLTH = 300;
       }
     }
   class Namekian extends Character{
@@ -22,5 +26,7 @@ public class Characters{
       DEF = 97;
       SP = namekianSpecialName;
       name = namekianName;
+      INTL = 70;
+      HLTH = 500;
     }
   }
