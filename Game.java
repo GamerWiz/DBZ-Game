@@ -32,7 +32,12 @@ public class Game{
       Scanner saiyanSpecialNamer = new Scanner(System.in);
       String playerSaiyanSpecialName = saiyanSpecialNamer.nextLine();
       Saiyan playerSaiyan = new Saiyan(playerSaiyanSpecialName, playerSaiyanName);
-      System.out.println("You created " + playerSaiyan.name + "!" + "\nSpecial Move:" + playerSaiyan.SP + "!");
+      System.out.println("Created " + playerSaiyan.name);
+      System.out.println("ATK: " + playerSaiyan.ATK);
+      System.out.println("DEF: " + playerSaiyan.DEF);
+      System.out.println("INTL: " + playerSaiyan.INTL);
+      System.out.println("HLTH: " + playerSaiyan.HLTH);
+      System.out.println("Special Move: " + playerSaiyan.SP);
     }
     if(chosenClass.equals("Namekian")){
       System.out.println("What is the name of your Namekian?");
@@ -42,7 +47,7 @@ public class Game{
       Scanner namekianSpecialNamer = new Scanner(System.in);
       String playerNamekianSpecialName = namekianSpecialNamer.nextLine();
       Namekian playerNamekian = new Namekian(playerNamekianSpecialName, playerNamekianName);
-      System.out.println("You created " + playerNamekian.name + "!" + " His special move is " + playerNamekian.SP + "!");
+      System.out.println("You created " + playerNamekian.name + "!" + " His special move is " + playerNamekian.SP);
     }
 
   }
