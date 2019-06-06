@@ -12,13 +12,14 @@ public class Game{
       System.out.println("HAME");
       TimeUnit.SECONDS.sleep(1);
       System.out.println("HAAAA");
-      TimeUnit.SECONDS.sleep(3);
+      TimeUnit.SECONDS.sleep(2);
     }
     catch (InterruptedException e) {
       System.err.format("Chill");
     }
   }
   public static void main(String[] args){
+    System.out.println("Main Menu:\r Character Creation");
     Scanner whatClass = new Scanner(System.in);
     System.out.println("What class would you like?");
     System.out.println("Options:\n Saiyan\n Namekian");
