@@ -3,7 +3,6 @@ public class Characters{
   String name;
   int ATK;
   int DEF;
-  int Health;
   String SP;
   int M1DMG;
 }
