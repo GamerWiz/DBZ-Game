@@ -15,7 +15,6 @@ public class Characters{
       DEF = 90;
       SP = saiyanSpecialName;
       name = saiyanName;
-      Health = 300;
       }
     }
   class Namekian extends Character{
@@ -24,6 +23,5 @@ public class Characters{
       DEF = 97;
       SP = namekianSpecialName;
       name = namekianName;
-      Health = 500;
     }
   }
