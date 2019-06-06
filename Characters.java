@@ -8,7 +8,7 @@ public class Characters{
   int M1DMG;
   int HLTH;
 }
-  class Saiyan extends Character{
+  class Saiyan extends Characters{
     //variables are from Characters class
     //constructor(input from object made in Game.java, input from object made in Game.java)
     public Saiyan(String saiyanSpecialName, String saiyanName){
@@ -20,7 +20,7 @@ public class Characters{
       HLTH = 300;
       }
     }
-  class Namekian extends Character{
+  class Namekian extends Characters{
     public Namekian(String namekianSpecialName, String namekianName){
       ATK = 90;
       DEF = 97;
