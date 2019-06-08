@@ -15,11 +15,14 @@ public class Game{
       TimeUnit.SECONDS.sleep(2);
     }
     catch (InterruptedException e) {
-      System.err.format("Chill");
+      System.err.format("Error");
     }
   }
   public static void main(String[] args){
-    System.out.println("Main Menu:\r Character Creation");
+    System.out.println("Main Menu:\n Character Creation");
+    Scanner MM = new Scanner(System.in);
+    String mainMenuSelect = MM.nextLine();
+    if(mainMenuSelect.equals)
     Scanner whatClass = new Scanner(System.in);
     System.out.println("What class would you like?");
     System.out.println("Options:\n Saiyan\n Namekian");
@@ -47,8 +50,12 @@ public class Game{
       Scanner namekianSpecialNamer = new Scanner(System.in);
       String playerNamekianSpecialName = namekianSpecialNamer.nextLine();
       Namekian playerNamekian = new Namekian(playerNamekianSpecialName, playerNamekianName);
-      System.out.println("You created " + playerNamekian.name + "!" + " His special move is " + playerNamekian.SP);
-    }
+      System.out.println("Created " + playerNamekian.name);
+      System.out.println("ATK: " + playerNamekian.ATK);
+      System.out.println("DEF: " + playerNamekian.DEF);
+      System.out.println("INTL: " + playerNamekian.INTL);
+      System.out.println("HLTH: " +playerNamekian.HLTH);
+      System.out.println("Special Move: " + playerNamekian.SP);    }
 
   }
 }
