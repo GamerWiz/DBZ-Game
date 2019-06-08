@@ -19,10 +19,10 @@ public class Game{
     }
   }
   public static void main(String[] args){
-    System.out.println("Main Menu:\n Character Creation");
+    System.out.println("Main Menu:\n (1) Character Creation");
     Scanner MM = new Scanner(System.in);
     String mainMenuSelect = MM.nextLine();
-    if(mainMenuSelect.equals)
+    if(mainMenuSelect.equals("1")){
     Scanner whatClass = new Scanner(System.in);
     System.out.println("What class would you like?");
     System.out.println("Options:\n Saiyan\n Namekian");
@@ -55,7 +55,8 @@ public class Game{
       System.out.println("DEF: " + playerNamekian.DEF);
       System.out.println("INTL: " + playerNamekian.INTL);
       System.out.println("HLTH: " +playerNamekian.HLTH);
-      System.out.println("Special Move: " + playerNamekian.SP);    }
-
+      System.out.println("Special Move: " + playerNamekian.SP);
+    }
+  }
   }
 }
