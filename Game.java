@@ -19,7 +19,7 @@ public class Game{
     }
   }
   public static void main(String[] args){
-    System.out.println("Main Menu:\n (1) Character Creation");
+    System.out.println("Main Menu:\n (1) Character Creation \n (2) Fight");
     Scanner MM = new Scanner(System.in);
     String mainMenuSelect = MM.nextLine();
     if(mainMenuSelect.equals("1")){
@@ -58,5 +58,9 @@ public class Game{
       System.out.println("Special Move: " + playerNamekian.SP);
     }
   }
+  if(mainMenuSelect.equals("2")){
+    Scanner bossSelect = new Scanner(System.in);
+    
   }
+}
 }
