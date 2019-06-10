@@ -18,6 +18,12 @@ public class Game{
       System.err.format("Error");
     }
   }
+
+
+  static void fightFrieza(){
+      System.out.println("Fight!");
+    }
+
   public static void main(String[] args){
     System.out.println("Main Menu:\n (1) Character Creation \n (2) Fight");
     Scanner MM = new Scanner(System.in);
@@ -60,7 +66,9 @@ public class Game{
   }
   if(mainMenuSelect.equals("2")){
     Scanner bossSelect = new Scanner(System.in);
-    
+    if(bossSelect.equals("Frieza")){
+      fightFrieza();
+    }
   }
 }
 }
