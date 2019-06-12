@@ -1,14 +1,18 @@
 public class Bosses{
   String name;
-  int ATK;
-  int DEF;
-  int INTL;
+  double ATK;
+  double DEF;
+  double INTL;
   String SP;
-  int M1DMG;
-  int HLTH;
+  double M1DMG;
+  double HLTH;
   }
     class Frieza extends Bosses{
       public Frieza(){
-        
+        name = "Frieza";
+        ATK = 200;
+        DEF = 90;
+        INTL = 50;
+        HLTH = 500;
       }
     }

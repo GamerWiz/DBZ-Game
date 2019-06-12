@@ -1,12 +1,12 @@
 public class Characters{
   //States variables for everything that extends Character
   String name;
-  int ATK;
-  int DEF;
-  int INTL;
+  double ATK;
+  double DEF;
+  double INTL;
   String SP;
-  int M1DMG;
-  int HLTH;
+  double M1DMG;
+  double HLTH;
 }
   class Saiyan extends Characters{
     //variables are from Characters class
