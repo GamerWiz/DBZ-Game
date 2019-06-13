@@ -3,7 +3,7 @@ public class Characters{
   String name;
   double ATK;
   double DEF;
-  double INTL;
+  double SPD;
   String SP;
   double M1DMG;
   double HLTH;
@@ -16,7 +16,7 @@ public class Characters{
       DEF = 90;
       SP = saiyanSpecialName;
       name = saiyanName;
-      INTL = 50;
+      SPD = 50;
       HLTH = 300;
       }
     }
@@ -26,7 +26,7 @@ public class Characters{
       DEF = 97;
       SP = namekianSpecialName;
       name = namekianName;
-      INTL = 70;
+      SPD = 70;
       HLTH = 500;
     }
   }

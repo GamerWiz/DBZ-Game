@@ -23,20 +23,16 @@ public class Game{
 
   static double attack(double victimHLTH, double attackerATK){
      Random rand = new Random();
-     int rand1 = rand.nextInt(100);
-     if(rand1 < 98){
-      while(rand1<98){             //98-100
-        rand1++;                   //if # is less, it adds until 98 and then adds random (1-2) to get btwn 98-100
-      }
-      int rand2 = rand.nextInt(3);
-      rand1 = (rand1 + rand2)/100;
-    }
-      attackerATK = attackerATK * rand1;
-      victimHLTH = victimHLTH - attackerATK;
-      return victimHLTH;
+     double initRand = rand.nextInt(3) + 98;
+     double rand1 = initRand/100d;
+     attackerATK = attackerATK * rand1;
+     victimHLTH = victimHLTH - attackerATK;
+     return victimHLTH;
     }
 
   public static void main(String[] args){
+
+
     //Initialization of these is needed so they can be read outside of if statements
     String playerSaiyanName = "0";
     String playerSaiyanSpecialName = "0";
@@ -64,7 +60,7 @@ public class Game{
       System.out.println("Created " + playerNamekian.name);
       System.out.println("ATK: " + playerNamekian.ATK);
       System.out.println("DEF: " + playerNamekian.DEF);
-      System.out.println("INTL: " + playerNamekian.INTL);
+      System.out.println("INTL: " + playerNamekian.SPD);
       System.out.println("HLTH: " +playerNamekian.HLTH);
       System.out.println("Special Move: " + playerNamekian.SP);
     }
@@ -93,13 +89,22 @@ public class Game{
               System.out.println("You defeated Frieza!");
               break;
             }
-            System.out.println("You attacked " + frieza.name + "! " + frieza.name + ": " + frieza.HLTH);
+            System.out.println("You attacked " + frieza.name + "! " + frieza.name + ": " + Math.round(frieza.HLTH));
           }
           if(move.equals("2")){
             System.out.println("Blocking...");
           }
+          if(move.equals("3")){
+            
+          }
           playerSaiyan.HLTH = attack(playerSaiyan.HLTH, frieza.ATK);
-          System.out.println("Frieza attacked you!" + " Health: " + playerSaiyan.HLTH);
+          if(playerSaiyan.HLTH < 0){
+            playerSaiyan.HLTH = 0;
+            System.out.println("Frieza attacked you!" + " Health: " + Math.round(playerSaiyan.HLTH));
+            System.out.println("You lost!");
+            break;
+          }
+          System.out.println("Frieza attacked you!" + " Health: " + Math.round(playerSaiyan.HLTH));
 
         }
       }

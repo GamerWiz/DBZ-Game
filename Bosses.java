@@ -2,7 +2,7 @@ public class Bosses{
   String name;
   double ATK;
   double DEF;
-  double INTL;
+  double SPD;
   String SP;
   double M1DMG;
   double HLTH;
@@ -10,9 +10,9 @@ public class Bosses{
     class Frieza extends Bosses{
       public Frieza(){
         name = "Frieza";
-        ATK = 200;
+        ATK = 97;
         DEF = 90;
-        INTL = 50;
+        SPD = 50;
         HLTH = 500;
       }
     }
