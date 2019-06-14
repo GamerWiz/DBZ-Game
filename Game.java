@@ -95,7 +95,7 @@ public class Game{
             System.out.println("Blocking...");
           }
           if(move.equals("3")){
-            
+            System.out.println(playerSaiyan.SP + "!");
           }
           playerSaiyan.HLTH = attack(playerSaiyan.HLTH, frieza.ATK);
           if(playerSaiyan.HLTH < 0){
