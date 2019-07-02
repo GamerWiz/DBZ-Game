@@ -1,10 +1,27 @@
-import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 import java.util.Random;
+import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class Game{
 
+static void play(String name){
+    try {
+      File audioFile = new File(name + ".wav"); //gets File (based off of string given in method in args)
+      Clip clip = AudioSystem.getClip(); //gets clip to use for File
+      clip.open(AudioSystem.getAudioInputStream(audioFile)); //Opens stream of audioFile to clip
+      clip.start(); //Starts clip
+    } catch(Exception e) {
+        System.out.println("Error occured with playing sound");
+    }
+  }
   static void kamehameha(){
     //TimeUnit must be put in a try/catch
     try{
@@ -30,8 +47,8 @@ public class Game{
      return victimHLTH;
     }
 
-  public static void main(String[] args){
 
+  public static void main(String[] args){
 
     //Initialization of these is needed so they can be read outside of if statements
     String playerSaiyanName = "0";
@@ -96,6 +113,7 @@ public class Game{
           }
           if(move.equals("3")){
             System.out.println(playerSaiyan.SP + "!");
+            play("kamehameha");
           }
           playerSaiyan.HLTH = attack(playerSaiyan.HLTH, frieza.ATK);
           if(playerSaiyan.HLTH < 0){
