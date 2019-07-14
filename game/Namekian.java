@@ -1,3 +1,4 @@
+package game;
 
 
 public class Namekian extends Entity {
