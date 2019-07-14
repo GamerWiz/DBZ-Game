@@ -1,2 +1,3 @@
 # DBZ-Text-Game
-A DBZ rpg
+A DBZ game
+
