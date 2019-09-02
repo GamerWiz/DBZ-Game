@@ -1,7 +1,7 @@
 package game;
 
 
-public abstract class Entity {
+public class Character {
 	  protected String name;
 	  protected double ATK;
 	  protected double DEF;
@@ -12,7 +12,9 @@ public abstract class Entity {
 	  protected double HLTH;
 	  protected ID id;
 	  
-	  public Entity(String name, String SPname) {
+
+	  
+	  public Character(String name, String SPname) {
 		  
 	  }
 }
