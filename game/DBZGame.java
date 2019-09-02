@@ -2,21 +2,18 @@ package game;
 
 
 import java.awt.AWTException;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
-import javazoom.jl.decoder.JavaLayerException;
-import javazoom.jl.player.Player;
-import races.Namekian;
-import races.Saiyan;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+
+
 
 
 
@@ -31,13 +28,14 @@ public class DBZGame{
     	  String answer = scan.nextLine();
     	  return answer;
       }
+      
 
     
     
-      static void play(String file) throws FileNotFoundException, JavaLayerException {
-    	  FileInputStream fis = new FileInputStream(file);
-    	  Player player = new Player(fis);
-    	  player.play();
+      static void play(String file) throws FileNotFoundException {
+    	  Media sound = new Media(new File(file).toURI().toString());
+    	  MediaPlayer mediaPlayer = new MediaPlayer(sound);
+    	  mediaPlayer.play();
       }
 	 
 
@@ -53,36 +51,39 @@ public class DBZGame{
 	     victimHLTH = victimHLTH - attackerATK;
 	     return victimHLTH;
 	    }
+	  
+	  static void run() throws ClassNotFoundException, IOException {
+		  	boolean running = true;  
+			while (running) {
+				
+				System.out.println("Main Menu \n (1) Character Creation \n (2) Characters \n (3) Fight");
+			    String mainMenuSelect = scan.nextLine();
+
+			    while (mainMenuSelect.equals("1")){
+			    	Menu.CharacterCreation();
+			    }
+			    
+			    
+			    
+			    while(mainMenuSelect.equals("2")) {
+			    	Menu.showStats();
+			    }
+			    
+			    
+			    
+			    while(mainMenuSelect.equals("3")){
+			        Menu.bossFightSelect();	
+			      }
+			    
+			    
+			    
+		}
+	  }
 
 
-	public static void main(String[] args) throws ClassNotFoundException, IOException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, JavaLayerException, AWTException{
+	public static void main(String[] args) throws ClassNotFoundException, IOException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, AWTException{
 	
 		  
-  	boolean running = true;  
-	while (running) {
-		
-		System.out.println("Main Menu \n (1) Character Creation \n (2) Characters \n (3) Fight");
-	    String mainMenuSelect = scan.nextLine();
-
-	    while (mainMenuSelect.equals("1")){
-	    	Menu.CharacterCreation();
-	    }
-	    
-	    
-	    
-	    while(mainMenuSelect.equals("2")) {
-	    	Menu.showStats();
-	    }
-	    
-	    
-	    
-	    while(mainMenuSelect.equals("3")){
-	        Menu.bossFightSelect();	
-	      }
-	    
-	    
-	    
-}
 	  }
 }
 	
